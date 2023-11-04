@@ -92,6 +92,7 @@ const App = () => {
           ) : null}
         </div>
       )}
+      
       <Particles id="tsparticles" />
     </>
   );
