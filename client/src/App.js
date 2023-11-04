@@ -4,10 +4,11 @@ import { Route, Routes } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import TakeLoan from "./components/TakeLoan";
 import RepayLoan from "./components/RepayLoan";
-import LiquidateNFT from "./pages/LiquidateNFT";
+import LiquidateNFT from "./components/LiquidateNFT";
 import { nft_contract_address, nft_contract_abi } from "./contract_Interactions/NFT_Contract";
 import { LendBorrowContactAddress,LendBorrowContractABIs } from "./contract_Interactions/LendBorrow";
-
+import Footer from "./components/Footer.jsx"
+import Particles from './components/Particles';
 const { ethers } = require("ethers");
 
 const App = () => {
@@ -58,6 +59,7 @@ const App = () => {
   return (
     <>
       {provider ? (
+        <>
         <div className="px-8 md:px-16">
           <Navbar />
           <Routes>
@@ -66,7 +68,10 @@ const App = () => {
             <Route path="/repayLoan" element={<RepayLoan lendBorrowContract={lendBorrowContract} signer={signer} />} />
             <Route path="/liquidateNFT" element={<LiquidateNFT lendBorrowContract={lendBorrowContract} signer={signer}/>} />
           </Routes>
+          
         </div>
+        <Footer/>
+        </>
       ) : (
         <div className="px-8 md:px-16">
           {showConnectButton ? (
@@ -91,6 +96,7 @@ const App = () => {
           ) : null}
         </div>
       )}
+      <Particles id="tsparticles" />
     </>
   );
 };

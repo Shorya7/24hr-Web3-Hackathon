@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { Alchemy, Network } from 'alchemy-sdk';
 // import { Link } from "react-router-dom";
+import nftData from "../utils/data.js";
 
-const TakeLoan = ({ signer, provider, account, tokenId, setTokenId, nftContractABI, nftContractAddress, lendBorrowContract }) => {
+const TakeLoan = ({ signer, account, tokenId, setTokenId, nftContractABI, nftContractAddress, lendBorrowContract }) => {
   const [selectedNft, setSelectedNft] = useState(null);
   const [tokenDataObjects, setTokenDataObjects] = useState([]);
   const [hasQueried, setHasQueried] = useState(false);
@@ -96,26 +97,26 @@ const TakeLoan = ({ signer, provider, account, tokenId, setTokenId, nftContractA
   }
 
   return (
-    <div className="bg-black text-400 min-h-screen p-4 " style={{color: "#9FFF45"}}>
+    <div className=" text-400 min-h-screen p-4 " style={{color: "#9FFF45"}}>
       {isLoading && <p>Loading...</p>}
       {error && <p className="text-red-400">Error: {error}</p>}
 
       {/* NFTs */}
       <p className="text-3xl font-semibold mb-8">Available NFTs</p>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
-        {tokenDataObjects.map((nft, index) => (
-          <div className="bg-green-900 p-4 rounded-lg" key={index}>
+      {nftData.map((nft, index) => (
+          <div className="bg-green-900 p-4 rounded-lg" key={index} style={{backgroundColor: "white"}}>
             <img
-              src={nft.rawMetadata.image}
+              src={nft.imageSrc}
               alt={nft.title}
               className="rounded-lg"
               style={{ height: '300px' }}
             />
             <div className="p-4">
-              <p className="font-semibold text-xl text-green-400">{nft.title}</p>
-              <p className="text-justify mt-3">{nft.description}</p>
+              <p className="font-semibold text-xl text-green-400" style={{color: "#2135e5"}} >{nft.title}</p>
+              <p className="text-justify mt-3"style={{color: "black"}} >{nft.description}</p>
               <button
-                className="bg-green-500 text-black font-semibold py-3 rounded-xl mt-6 w-full"
+                className="bg-green-500 text-black font-semibold py-3 rounded-xl mt-6 w-full" style={{color: "black", backgroundColor:'#9FFF45'}}
                 onClick={() => openPopup(nft)}
               >
                 Take Loan
@@ -155,10 +156,10 @@ const TakeLoan = ({ signer, provider, account, tokenId, setTokenId, nftContractA
       )}
 
       {/* Deposit NFT Form */}
-      <div className="max-w-md mx-auto mt-6">
-        <form className="bg-green-900 shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      <div className="max-w-md mx-auto mt-6" >
+        <form className="bg-900 shadow-md rounded px-8 pt-6 pb-8 mb-4 "style={{backgroundColor: "white", marginTop: '20px'}}>
           <div className="mb-4">
-            <label className="block text-sm font-bold text-green-400 mb-2" htmlFor="tokenContractAddress">
+            <label className="block text-sm font-bold text-400 mb-2"style={{color: "#2135e5"}} htmlFor="tokenContractAddress">
               Token Contract Address
             </label>
             <input
@@ -171,7 +172,7 @@ const TakeLoan = ({ signer, provider, account, tokenId, setTokenId, nftContractA
             />
           </div>
           <div className="mb-6">
-            <label className="block text-sm font-bold text-green-400 mb-2" htmlFor="tokenID">
+            <label className="block text-sm font-bold text-green-400 mb-2" style={{color: "#2135e5"}} htmlFor="tokenID">
               Token ID
             </label>
             <input
@@ -185,7 +186,7 @@ const TakeLoan = ({ signer, provider, account, tokenId, setTokenId, nftContractA
           </div>
           <div className="flex items-center justify-between">
             <button
-              className="bg-green-500 hover:bg-green-600 text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="bg-green-500 hover:bg-600 text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" style={{color: "black", backgroundColor:'#9FFF45'}}
               type="button"
               onClick={handleDeposit}
             >
@@ -195,7 +196,7 @@ const TakeLoan = ({ signer, provider, account, tokenId, setTokenId, nftContractA
         </form>
 
         {/* Check Withdraw Amount Button */}
-        <button className="font-semibold bg-blue-500 w-full rounded-lg py-3 mt-5 text-white" onClick={checkCanWithDrawTokens}>
+        <button className="font-semibold bg-500 w-full rounded-lg py-3 mt-5 text-white" onClick={checkCanWithDrawTokens} style={{backgroundColor: '#2135e5'}} >
           Check Withdraw Amount
         </button>
       </div>

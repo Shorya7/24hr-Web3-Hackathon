@@ -1,65 +1,35 @@
-import NFT1 from "../img/nft1.webp";
+import NFT1 from "../assets/WhatsApp Image 2023-11-04 at 12.25.12_47c50ded.jpg";
+import NFT2 from "../assets/WhatsApp Image 2023-11-04 at 12.25.12_a9c00a49.jpg";
+
+import NFT3 from "../assets/WhatsApp Image 2023-11-04 at 12.25.12_ae7ffd0f.jpg";
+
+// import NFT4 from "../img/WhatsApp Image 2023-11-04 at 12.16.24_d5c5dbfe.jpg";
+import NFT5 from "../assets/vibeheads.gif";
 
 const nftData = [
   {
-    title: "NFT Title 1",
+    title: "Crypto Punks",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit.Consequuntur, fuga assumenda amet saepe, repellendus omnis accusamus quia nostrum tenetur autem ullam nam. Repudiandae aperiam excepturi magni maiores nobis modi.",
     imageSrc: NFT1,
   },
   {
-    title: "NFT Title 2",
+    title: "Cool Cats",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit.Consequuntur, fuga assumenda amet saepe, repellendus omnis accusamus quia nostrum tenetur autem ullam nam. Repudiandae aperiam excepturi magni maiores nobis modi.",
-    imageSrc: NFT1,
+    imageSrc: NFT2,
   },
   {
-    title: "NFT Title 3",
+    title: "Nony Pony",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit.Consequuntur, fuga assumenda amet saepe, repellendus omnis accusamus quia nostrum tenetur autem ullam nam. Repudiandae aperiam excepturi magni maiores nobis modi.",
-    imageSrc: NFT1,
+    imageSrc: NFT3,
   },
   {
-    title: "NFT Title 4",
+    title: "Pokaro",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit.Consequuntur, fuga assumenda amet saepe, repellendus omnis accusamus quia nostrum tenetur autem ullam nam. Repudiandae aperiam excepturi magni maiores nobis modi.",
-    imageSrc: NFT1,
-  },
-  {
-    title: "NFT Title 5",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit.Consequuntur, fuga assumenda amet saepe, repellendus omnis accusamus quia nostrum tenetur autem ullam nam. Repudiandae aperiam excepturi magni maiores nobis modi.",
-    imageSrc: NFT1,
-  },
-  {
-    title: "NFT Title 6",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit.Consequuntur, fuga assumenda amet saepe, repellendus omnis accusamus quia nostrum tenetur autem ullam nam. Repudiandae aperiam excepturi magni maiores nobis modi.",
-    imageSrc: NFT1,
-  },
-  {
-    title: "NFT Title 7",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit.Consequuntur, fuga assumenda amet saepe, repellendus omnis accusamus quia nostrum tenetur autem ullam nam. Repudiandae aperiam excepturi magni maiores nobis modi.",
-    imageSrc: NFT1,
-  },
-  {
-    title: "NFT Title 8",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit.Consequuntur, fuga assumenda amet saepe, repellendus omnis accusamus quia nostrum tenetur autem ullam nam. Repudiandae aperiam excepturi magni maiores nobis modi.",
-    imageSrc: NFT1,
-  },
-  {
-    title: "NFT Title 9",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit.Consequuntur, fuga assumenda amet saepe, repellendus omnis accusamus quia nostrum tenetur autem ullam nam. Repudiandae aperiam excepturi magni maiores nobis modi.",
-    imageSrc: NFT1,
-  },
-  {
-    title: "NFT Title 10",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit.Consequuntur, fuga assumenda amet saepe, repellendus omnis accusamus quia nostrum tenetur autem ullam nam. Repudiandae aperiam excepturi magni maiores nobis modi.",
-    imageSrc: NFT1,
+    imageSrc: NFT5,
   },
 ];
 
